@@ -1,0 +1,221 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+nav {
+    background-color: #4a4a4a; /* Your original color */
+    box-shadow: 0px 2px 5px rgba(247, 245, 245, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: #fff;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    margin-right: 20px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff8c00; /* Your hover color */
+}
+
+.firstSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 50px 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.leftSection {
+    text-align: left;
+    flex: 1;
+    min-width: 300px;
+}
+
+.leftSection h1 {
+    font-size: 2rem;
+    color: #ff8c00; /* Your title color */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    padding: 15px 20px;
+    margin-bottom: 30px;
+    background: #ff8c00; /* Your button color */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    width: 100%; /* Full width for mobile */
+    max-width: 200px; /* Limit button width */
+}
+
+.btn:hover {
+    background: #ff6347; /* Your hover color */
+}
+
+.rightSection {
+    flex: 1;
+    min-width: 300px;
+}
+
+.rightSection img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.secondSection, .projectsSection, .contactse {
+    text-align: center;
+    margin: 50px 20px;
+}
+
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.vertical {
+    width: 300px;
+    margin: 20px;
+    text-align: left;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    transition: transform 0.3s ease-in-out;
+}
+
+.vertical:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    background-color: #4a4a4a; /* Your footer color */
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.footer {
+    margin: 20px 0;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.footer-rights {
+    margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
+
+    .firstSection {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .btn {
+        width: 100%;
+    }
+
+    .vertical {
+        width: 90%; /* Responsive width for project boxes */
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .firstSection h1 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px; /* Smaller padding for mobile */
+    }
+
+    .box {
+        flex-direction: column;
+        align-items: center; /* Center align for mobile */
+    }
+
+    .vertical {
+        width: 90%; /* Make project boxes full width on small screens */
+        margin: 10px 0; /* Reduce margin */
+    }
+}
