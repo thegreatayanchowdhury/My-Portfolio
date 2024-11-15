@@ -12,7 +12,7 @@ body {
 }
 
 nav {
-    background-color: #4a4a4a; /* Your original color */
+    background-color: #4a4a4a;
     box-shadow: 0px 2px 5px rgba(247, 245, 245, 0.1);
     position: sticky;
     top: 0;
@@ -42,7 +42,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    color: #ff8c00; /* Your hover color */
+    color: #ff8c00;
 }
 
 .firstSection {
@@ -62,7 +62,7 @@ nav ul li a:hover {
 
 .leftSection h1 {
     font-size: 2rem;
-    color: #ff8c00; /* Your title color */
+    color: #ff8c00; 
 }
 
 .buttons {
@@ -74,7 +74,7 @@ nav ul li a:hover {
 .btn {
     padding: 15px 20px;
     margin-bottom: 30px;
-    background: #ff8c00; /* Your button color */
+    background: #ff8c00; 
     color: #fff;
     border: none;
     border-radius: 8px;
@@ -88,7 +88,7 @@ nav ul li a:hover {
 }
 
 .btn:hover {
-    background: #ff6347; /* Your hover color */
+    background: #ff6347; 
 }
 
 .rightSection {
@@ -132,7 +132,7 @@ nav ul li a:hover {
 }
 
 footer {
-    background-color: #4a4a4a; /* Your footer color */
+    background-color: #4a4a4a; 
     color: #fff;
     padding: 40px 0;
     text-align: center;
