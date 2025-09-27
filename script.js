@@ -5,7 +5,7 @@ function toggleNav() {
 
 // Typing effect
 let i = 0;
-const text = "I am a AI & ML Specialist and AIML Core Member at GDG on Campus AEC";
+const text = "I am a AI & ML Specialist and AI & ML Lead at GDG on Campus AEC";
 const speed = 100;
 
 function typeEffect() {
@@ -22,4 +22,5 @@ window.onload = function() {
         typeEffect();
     }
 };
+
 
