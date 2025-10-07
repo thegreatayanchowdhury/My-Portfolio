@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="description"
-        content="Portfolio of Ayan Chowdhury, a B.Tech student specializing in AI and ML. Explore projects, achievements, and connect via GitHub or LinkedIn.">
-    <title>AYAN CHOWDHURY</title>
+        content="AI & ML Specialist and B.Tech student, Ayan Chowdhury. Explore projects in Facial Recognition, NLP, Python, Deep Learning, and Full-Stack Development.">
+    <title>AYAN CHOWDHURY - AI/ML Portfolio</title>
+    
+    <!-- Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -20,129 +24,115 @@
             <div class="left">My Portfolio</div>
             <ul id="nav-links">
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">Education</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact me</a></li>
+                <li>
+                    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark/Light Mode">
+                        <i class="fas fa-sun" id="theme-icon"></i> 
+                    </button>
+                </li>
             </ul>
             <div class="nav-toggle" onclick="toggleNav()">&#9776;</div>
         </nav>
     </header>
 
     <main>
+        <!-- Home Section -->
         <section class="firstSection" id="home">
             <div class="leftSection">
-                <h1>Hi, I'm <span style="color: #ff8c00;">AYAN CHOWDHURY</span></h1>
+                <h1>Hi, I'm <span class="highlight">AYAN CHOWDHURY</span></h1>
                 <span id="element"></span>
-                <div class="buttons">
-                    <a href="AYAN_CHOWDHURY_RESUME.pdf" class="btn">Download Resume</a>
-                    <a href="https://github.com/thegreatayanchowdhury" class="btn">Visit Github</a>
-                    <a href="https://www.linkedin.com/in/ayan-chowdhury-4b166228b/" class="btn">Visit LinkedIn</a>
+                <div class="button-group">
+                    <a href="AYAN_CHOWDHURY_RESUME.pdf" class="btn" target="_blank">Download Resume</a>
+                    <a href="https://github.com/thegreatayanchowdhury" class="btn" target="_blank">Visit Github</a>
+                    <a href="https://www.linkedin.com/in/ayan-chowdhury-4b166228b/" class="btn" target="_blank">Visit LinkedIn</a>
                 </div>
             </div>
             <div class="rightSection">
-                <img src="bg.png" alt="Background image representing AI development" />
+                <img src="bg.png" alt="Ayan Chowdhury profile" width="450" height="450"
+                     onerror="this.onerror=null; this.src='https://placehold.co/450x450/cccccc/333333?text=Profile+Image'"/>
             </div>
         </section>
 
         <hr>
 
-        <section class="secondSection" id="about">
+        <!-- Education Section -->
+        <section class="secondSection" id="education">
             <h2>Education</h2>
             <div class="box">
                 <div class="vertical">
-                    <img src="aec.png" alt="Logo of Asansol Engineering College" height="50">
-                    <div class="vertical-title">
-                        Asansol Engineering College, Asansol
-                    </div>
-                    <div class="vertical-desc">
-                        B.Tech CSE(AIML) Student, (2027 batch)
-                    </div>
+                    <img src="aec.png" alt="Asansol Engineering College" width="50" height="50">
+                    <div class="vertical-title">Asansol Engineering College, Asansol</div>
+                    <div class="vertical-desc">B.Tech CSE(AIML) Student, (2027 batch)</div>
                 </div>
                 <div class="vertical">
-                    <img src="vpuc.jpg" alt="Logo of Vijaya Pre University College">
-                    <div class="vertical-title">
-                        Vijaya Pre University College, Jayanagar
-                    </div>
-                    <div class="vertical-desc">
-                        +2 passout (2023)
-                    </div>
+                    <img src="vpuc.jpg" alt="Vijaya Pre University College" width="50" height="50">
+                    <div class="vertical-title">Vijaya Pre University College, Jayanagar</div>
+                    <div class="vertical-desc">+2 passout (2023)</div>
                 </div>
                 <div class="vertical">
-                    <img src="ag.png" alt="Logo of Assembly Of God Church School" height="45px">
-                    <div class="vertical-title">
-                        Assembly Of God Church School, Sodepur
-                    </div>
-                    <div class="vertical-desc">
-                        10th passout (2021)
-                    </div>
+                    <img src="ag.png" alt="Assembly Of God Church School" width="50" height="50">
+                    <div class="vertical-title">Assembly Of God Church School, Sodepur</div>
+                    <div class="vertical-desc">10th passout (2021)</div>
                 </div>
             </div>
         </section>
 
+        <!-- Projects Section -->
         <section class="projectsSection" id="projects">
             <h2>Projects</h2>
             <div class="box">
                 <div class="vertical">
                     <h3>Face Recognition Attendance</h3>
                     <p><strong>Aug 2024 - May 2025</strong></p>
-                    <p>The Face Recognition Attendance system automates attendance tracking using AI/ML algorithms to
-                        identify and verify faces in real-time. It leverages deep learning models like CNN to detect
-                        faces, ensuring accurate attendance records. Integrated into classrooms, it allows teachers to
-                        access real-time reports and maintains data privacy with encryption.</p>
-                    <p><strong>Skills:</strong> Python, Machine Learning, Facial Recognition, Web Development, Data
-                        Security and Privacy</p>
+                    <p>Automates attendance using deep learning (CNN) to identify faces in real-time.</p>
+                    <p><strong>Skills:</strong> Python, ML, Facial Recognition, Web Development</p>
                 </div>
 
                 <div class="vertical">
-                    <h3><a href="https://zero0o0.streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer">ZERO</a></h3>
+                    <h3><a href="https://zero0o0.streamlit.app/" class="project-link" target="_blank">ZERO</a></h3>
                     <p><strong>Aug 2024 - May 2025</strong></p>
-                    <p>ZERO is an intelligent chatbot built using AIML, designed to deliver context-aware responses. It
-                        integrates NLP techniques for understanding user queries and offers customizable conversation
-                        flows. ZERO is optimized for scalability, making it suitable across industries like customer
-                        support and education.</p>
-                    <p><strong>Skills:</strong> AIML, Natural Language Processing (NLP), Chatbot Development,
-                        Conversational AI</p>
+                    <p>An intelligent chatbot built using AIML for contextual responses.</p>
+                    <p><strong>Skills:</strong> NLP, Chatbot Development, AI</p>
                 </div>
 
                 <div class="vertical">
-                    <h3><a href="https://syntax-void.onrender.com/" class="project-link" target="_blank" rel="noopener noreferrer">Syntax Void</a></h3>
+                    <h3><a href="https://syntax-void.onrender.com/" class="project-link" target="_blank">Syntax Void</a></h3>
                     <p><strong>Jan 2025 - May 2025</strong></p>
-                    <p>Developed a full-stack dynamic blog platform using Flask (Python) for the backend,
-                        a Bootstrap template for the frontend,
-                        and Clever Cloud MySQL with phpMyAdmin for database management.
-                        The platform allows users to create, edit, and manage blog posts seamlessly.</p>
-                    <p><strong>Skills:</strong> Flask, MySQL, Bootstrap, Web Development, Cloud Deployment, PhpMyAdmin, RESTful API</p>
+                    <p>Full-stack dynamic blog platform using Flask and MySQL.</p>
+                    <p><strong>Skills:</strong> Flask, MySQL, Bootstrap, REST API</p>
                 </div>
 
                 <div class="vertical">
-                    <h3><a href="https://bhpredictor.streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer">BHPredictor</a></h3>
-                    <p><strong>Jun 2025 - Jun 2025</strong></p>
-                    <p>Developed a machine learning web application using the classic Boston Housing dataset to predict median home prices in Boston suburbs.</p>
-                    <p><strong>Skills:</strong>Python (Programming Language), Scikit-Learn, NumPy, pandas</p>
+                    <h3><a href="https://bhpredictor.streamlit.app/" class="project-link" target="_blank">BHPredictor</a></h3>
+                    <p><strong>Jun 2025</strong></p>
+                    <p>Predicts Boston house prices using ML regression models.</p>
+                    <p><strong>Skills:</strong> Python, Scikit-Learn, NumPy, pandas</p>
                 </div>
 
                 <div class="vertical">
-                    <h3><a href="https://deforestation-monitoring-using-satallite-imagery.streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer">Deforestation Monitoring Using Satellite Imagery</a></h3>
+                    <h3><a href="https://deforestation-monitoring-using-satallite-imagery.streamlit.app/" class="project-link" target="_blank">Deforestation Monitoring</a></h3>
                     <p><strong>Aug 2025 - Sep 2025</strong></p>
-                    <p>Built a two-stage machine learning pipeline deployed as a Streamlit web application to classify satellite images into Forest or multiple Deforestation categories using EuroSAT dataset and MobileNetV2 feature extraction.</p>
-                    <p><strong>Skills:</strong> Python (Programming Language), Machine Learning, Computer Vision, MobileNetV2, Random Forest, Streamlit, EuroSAT Dataset, Git</p>
+                    <p>Streamlit app to classify satellite images using MobileNetV2 and EuroSAT dataset.</p>
+                    <p><strong>Skills:</strong> Python, ML, CV, Streamlit</p>
                 </div>
-
             </div>
         </section>
-        
+
+        <!-- Contact Section -->
         <section class="contactse" id="contact">
-            <h2 style="margin-bottom: 20px;">Contact Me</h2>
+            <h2>Get In Touch</h2>
+            <p>I'm actively looking for internship opportunities. Feel free to connect!</p>
             <a href="mailto:ayanchwdhry4@gmail.com" class="btn">Send Mail</a>
         </section>
-
     </main>
 
     <footer id="footer">
         <div class="footer">
             <ul>
                 <li><a href="#home">Home</a></li>
-                <li><a href="#about">Education</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -152,8 +142,7 @@
         </div>
     </footer>
 
+    <!-- External JS -->
     <script src="script.js"></script>
 </body>
-
 </html>
-
