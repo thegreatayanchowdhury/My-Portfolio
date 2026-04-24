@@ -19,6 +19,21 @@
 </head>
 
 <body>
+    <div class="loader-wrapper">
+        <div class="loader-main">
+            <div class="scan-line"></div>
+            <div class="loader-inner">
+                <h1 class="glitch-text" data-text="SYSTEM_INIT">SYSTEM_INIT</h1>
+                <div class="progress-bar-container">
+                    <div class="progress-bar-fill"></div>
+                </div>
+                <div class="status-log">
+                    <span id="log-text">Booting core...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="cursor"></div>
     <header>
         <nav>
             <div class="left">My Portfolio</div>
@@ -41,23 +56,28 @@
     <main>
         <section class="firstSection" id="home">
             <div class="leftSection">
-                <h1>Hi, I'm <span class="highlight">AYAN CHOWDHURY</span></h1>
-                <span id="element"></span>
-                <div class="button-group">
-                    <a href="AYAN_CHOWDHURY_RESUME.pdf?v=2" class="btn" target="_blank" aria-label="Download Ayan Chowdhury's Resume">Download Resume</a>
-                    <a href="https://github.com/thegreatayanchowdhury" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit Ayan Chowdhury's Github profile">Visit Github</a>
-                    <a href="https://www.linkedin.com/in/ayan-chowdhury-4b166228b/" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Visit Ayan Chowdhury's LinkedIn profile">Visit LinkedIn</a>
+                <h1 class="main-title">Hi, I'm <span class="highlight">AYAN CHOWDHURY</span></h1>
+                <span id="element" class="pre-title"></span>
+                <div class="button-group hero-footer">
+                    <a href="AYAN_CHOWDHURY_RESUME.pdf?v=2" class="btn" target="_blank"
+                        aria-label="Download Ayan Chowdhury's Resume">Download Resume</a>
+                    <a href="https://github.com/thegreatayanchowdhury" class="btn" target="_blank"
+                        rel="noopener noreferrer" aria-label="Visit Ayan Chowdhury's Github profile">Visit Github</a>
+                    <a href="https://www.linkedin.com/in/ayan-chowdhury-4b166228b/" class="btn" target="_blank"
+                        rel="noopener noreferrer" aria-label="Visit Ayan Chowdhury's LinkedIn profile">Visit
+                        LinkedIn</a>
                 </div>
             </div>
             <div class="rightSection">
                 <img src="bg.png" alt="Ayan Chowdhury's profile image or a graphic representing AI development"
-                    width="450" height="450" onerror="this.onerror=null; this.src='https://placehold.co/450x450/cccccc/333333?text=Profile+Image'" />
+                    width="450" height="450"
+                    onerror="this.onerror=null; this.src='https://placehold.co/450x450/cccccc/333333?text=Profile+Image'" />
             </div>
         </section>
 
         <hr>
 
-        <section class="secondSection" id="education">
+        <section class="secondSection reveal" id="education">
             <h2>Education</h2>
             <div class="box">
                 <div class="vertical">
@@ -90,8 +110,8 @@
             </div>
         </section>
 
-        <section class="projectsSection" id="projects">
-            <h2>Projects</h2>
+        <section class="projectsSection reveal" id="projects">
+            <h2>SELECTED WORKS</h2>
             <div class="box">
                 <div class="vertical">
                     <h3>Face Recognition Attendance</h3>
@@ -105,7 +125,9 @@
                 </div>
 
                 <div class="vertical">
-                    <h3><a href="https://zero0o0.streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Link to the ZERO intelligent chatbot project">ZERO</a></h3>
+                    <h3><a href="https://zero0o0.streamlit.app/" class="project-link" target="_blank"
+                            rel="noopener noreferrer" aria-label="Link to the ZERO intelligent chatbot project">ZERO</a>
+                    </h3>
                     <p><strong>Aug 2024 - May 2025</strong></p>
                     <p>ZERO is an intelligent chatbot built using AIML, designed to deliver context-aware responses. It
                         integrates NLP techniques for understanding user queries and offers customizable conversation
@@ -116,36 +138,49 @@
                 </div>
 
                 <div class="vertical">
-                    <h3><a href="https://syntax-void.onrender.com/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Link to the Syntax Void dynamic blog platform project">Syntax Void</a></h3>
+                    <h3><a href="https://syntax-void.onrender.com/" class="project-link" target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Link to the Syntax Void dynamic blog platform project">Syntax Void</a></h3>
                     <p><strong>Jan 2025 - May 2025</strong></p>
                     <p>Developed a full-stack dynamic blog platform using Flask (Python) for the backend,
                         a Bootstrap template for the frontend,
                         and Clever Cloud MySQL with phpMyAdmin for database management.
                         The platform allows users to create, edit, and manage blog posts seamlessly.</p>
-                    <p><strong>Skills:</strong> Flask, MySQL, Bootstrap, Web Development, Cloud Deployment, PhpMyAdmin, RESTful API</p>
+                    <p><strong>Skills:</strong> Flask, MySQL, Bootstrap, Web Development, Cloud Deployment, PhpMyAdmin,
+                        RESTful API</p>
                 </div>
 
                 <div class="vertical">
-                    <h3><a href="https://bhpredictor.streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Link to the BHPredictor home price prediction project">BHPredictor</a></h3>
+                    <h3><a href="https://bhpredictor.streamlit.app/" class="project-link" target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Link to the BHPredictor home price prediction project">BHPredictor</a></h3>
                     <p><strong>Jun 2025 - Jun 2025</strong></p>
-                    <p>Developed a machine learning web application using the classic Boston Housing dataset to predict median home prices in Boston suburbs.</p>
+                    <p>Developed a machine learning web application using the classic Boston Housing dataset to predict
+                        median home prices in Boston suburbs.</p>
                     <p><strong>Skills:</strong>Python (Programming Language), Scikit-Learn, NumPy, pandas</p>
                 </div>
 
                 <div class="vertical">
-                    <h3><a href="https://deforestation-monitoring-using-satallite-imagery.streamlit.app/" class="project-link" target="_blank" rel="noopener noreferrer" aria-label="Link to Deforestation Monitoring Using Satellite Imagery project">Deforestation Monitoring Using Satellite Imagery</a></h3>
+                    <h3><a href="https://deforestation-monitoring-using-satallite-imagery.streamlit.app/"
+                            class="project-link" target="_blank" rel="noopener noreferrer"
+                            aria-label="Link to Deforestation Monitoring Using Satellite Imagery project">Deforestation
+                            Monitoring Using Satellite Imagery</a></h3>
                     <p><strong>Aug 2025 - Sep 2025</strong></p>
-                    <p>Built a two-stage machine learning pipeline deployed as a Streamlit web application to classify satellite images into Forest or multiple Deforestation categories using EuroSAT dataset and MobileNetV2 feature extraction.</p>
-                    <p><strong>Skills:</strong> Python (Programming Language), Machine Learning, Computer Vision, MobileNetV2, Random Forest, Streamlit, EuroSAT Dataset, Git</p>
+                    <p>Built a two-stage machine learning pipeline deployed as a Streamlit web application to classify
+                        satellite images into Forest or multiple Deforestation categories using EuroSAT dataset and
+                        MobileNetV2 feature extraction.</p>
+                    <p><strong>Skills:</strong> Python (Programming Language), Machine Learning, Computer Vision,
+                        MobileNetV2, Random Forest, Streamlit, EuroSAT Dataset, Git</p>
                 </div>
 
             </div>
         </section>
 
-        <section class="contactse" id="contact">
+        <section class="contactse reveal" id="contact">
             <h2>Get In Touch</h2>
             <p style="margin-bottom: 25px;">I'm actively looking for opportunities. Feel free to connect!</p>
-            <a href="mailto:ayanchwdhry4@gmail.com" class="btn" aria-label="Send an email to Ayan Chowdhury">Send Mail</a>
+            <a href="mailto:ayanchwdhry4@gmail.com" class="btn" aria-label="Send an email to Ayan Chowdhury">Send
+                Mail</a>
         </section>
 
     </main>
@@ -164,10 +199,9 @@
         </div>
     </footer>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
 </body>
 
 </html>
-
-
-

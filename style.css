@@ -1,9 +1,11 @@
-/* 1. CSS Variables for easy color management (Light Mode Default) */
 :root {
     /* Primary Palette */
-    --primary-color: #ff8c00; /* Dark Orange/Highlight */
-    --hover-color: #ff6347; /* Tomato Red for hover */
-    --secondary-color: #4a4a4a; /* Dark Grey Navigation/Footer */
+    --primary-color: #ff8c00;
+    /* Dark Orange/Highlight */
+    --hover-color: #ff6347;
+    /* Tomato Red for hover */
+    --secondary-color: #4a4a4a;
+    /* Dark Grey Navigation/Footer */
 
     /* Theme Colors (Light Mode) */
     --bg-main: #f8f8f8;
@@ -11,7 +13,7 @@
     --text-dark: #333;
     --text-muted: #555;
     --nav-bg: var(--secondary-color);
-    --nav-text: #f8f8f8;
+    --nav-text: #1f1d1d;
     --card-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
 }
 
@@ -37,6 +39,7 @@ body.dark-mode footer {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: none;
 }
 
 body {
@@ -45,13 +48,20 @@ body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
-    transition: background-color 0.3s, color 0.3s; /* Smooth theme transition */
+    transition: background-color 0.3s, color 0.3s;
+    /* Smooth theme transition */
 }
 
 /* Navigation Styling */
 nav {
-    background-color: var(--nav-bg);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* We use rgba for transparency. 0.7 is the 'glass' opacity */
+    background: rgba(33, 33, 33, 0.7) !important;
+    backdrop-filter: blur(12px) saturate(180%);
+    -webkit-backdrop-filter: blur(12px) saturate(180%);
+
+    /* Subtle border makes glass look more realistic */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -59,8 +69,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 15px 30px;
-    color: var(--nav-text);
-    transition: background-color 0.3s;
+}
+
+/* Fix for Light Mode Glass */
+body:not(.dark-mode) nav {
+    background: rgba(248, 248, 248, 0.7) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1) !important;
 }
 
 nav .left {
@@ -107,7 +121,8 @@ nav .left {
 }
 
 .nav-toggle {
-    display: none; /* Hidden on desktop */
+    display: none;
+    /* Hidden on desktop */
     cursor: pointer;
     font-size: 28px;
     line-height: 1;
@@ -123,7 +138,8 @@ nav .left {
     padding: 80px 40px;
     gap: 40px;
     flex-wrap: wrap;
-    max-width: 1200px; /* Added max-width for better centering on very large screens */
+    max-width: 1200px;
+    /* Added max-width for better centering on very large screens */
     margin: 0 auto;
 }
 
@@ -131,7 +147,8 @@ nav .left {
     text-align: left;
     /* FIX: Removed flex: 1 to let content dictate width, then min-width ensures it scales down gracefully */
     min-width: 300px;
-    max-width: 550px; /* Optional: Constrain width on larger screens */
+    max-width: 550px;
+    /* Optional: Constrain width on larger screens */
 }
 
 .leftSection h1 {
@@ -142,7 +159,8 @@ nav .left {
 .leftSection #element {
     font-size: clamp(1.2rem, 3vw, 2rem);
     display: block;
-    min-height: 2.5rem; /* Reserve space for the typing text */
+    min-height: 2.5rem;
+    /* Reserve space for the typing text */
 }
 
 .highlight {
@@ -210,20 +228,28 @@ hr {
 }
 
 /* Section Styling */
-.secondSection, .projectsSection, .contactse {
+.secondSection,
+.projectsSection,
+.contactse {
     text-align: center;
     padding: 40px 20px;
-    max-width: 1200px; /* Constraint content width */
+    max-width: 1200px;
+    /* Constraint content width */
     margin: 0 auto;
 }
 
-.secondSection h2, .projectsSection h2, .contactse h2 {
+.secondSection h2,
+.projectsSection h2,
+.contactse h2 {
     font-size: clamp(1.8rem, 4vw, 2.5rem);
     margin-bottom: 50px;
     color: var(--secondary-color);
     transition: color 0.3s;
 }
-.dark-mode .secondSection h2, .dark-mode .projectsSection h2, .dark-mode .contactse h2 {
+
+.dark-mode .secondSection h2,
+.dark-mode .projectsSection h2,
+.dark-mode .contactse h2 {
     color: var(--primary-color);
 }
 
@@ -264,13 +290,15 @@ hr {
     object-fit: contain;
 }
 
-.vertical-title, .vertical h3 {
+.vertical-title,
+.vertical h3 {
     font-size: 1.15rem;
     font-weight: 600;
     color: var(--primary-color);
 }
 
-.vertical-desc, .vertical p {
+.vertical-desc,
+.vertical p {
     font-size: 0.95rem;
     color: var(--text-muted);
     margin-bottom: 0;
@@ -325,7 +353,8 @@ footer {
 
 .footer ul li a {
     text-decoration: none;
-    color: inherit; /* Inherits from footer color, fixed above */
+    color: inherit;
+    /* Inherits from footer color, fixed above */
     transition: color 0.3s;
 }
 
@@ -340,10 +369,12 @@ footer {
 
 /* Responsive Styles */
 @media (max-width: 850px) {
+
     /* Mobile Nav Setup */
     nav {
         padding: 15px 20px;
     }
+
     .nav-toggle {
         display: block;
     }
@@ -352,7 +383,8 @@ footer {
         display: none;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Below the nav bar */
+        top: 60px;
+        /* Below the nav bar */
         left: 0;
         width: 100%;
         background-color: var(--nav-bg);
@@ -387,15 +419,18 @@ footer {
     }
 
     .button-group {
-        flex-direction: column; /* Stack buttons vertically on mobile */
+        flex-direction: column;
+        /* Stack buttons vertically on mobile */
         align-items: center;
         width: 100%;
-        gap: 15px; /* Reduced gap slightly for mobile */
+        gap: 15px;
+        /* Reduced gap slightly for mobile */
     }
 
     .btn {
         width: 80%;
-        max-width: 350px; /* Increased max-width slightly for better tablet look */
+        max-width: 350px;
+        /* Increased max-width slightly for better tablet look */
         /* FIX: Allow buttons to take up all available space in the column */
         flex-grow: 1;
     }
@@ -404,4 +439,132 @@ footer {
         margin-top: 30px;
         max-width: 350px;
     }
+}
+
+/* ============================================================
+   GSAP ENHANCEMENTS (Cursor, Glow, & Scroll Reveal)
+   ============================================================ */
+
+/* 1. Custom Cursor */
+.cursor {
+    width: 25px; /* Slightly larger looks better when transparent */
+    height: 25px;
+    /* Red: 255, Green: 140, Blue: 0, Alpha: 0.5 (Transparency) */
+    background-color: rgba(255, 140, 0, 0.8); 
+    border: 2px solid rgba(255, 140, 0, 0.8); /* Solid border helps it pop */
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 9999;
+    
+    /* backdrop-filter blurs what is INSIDE the dot */
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    
+    transform: translate(-50%, -50%); /* Centers the dot on the mouse tip */
+    transition: transform 0.1s ease;
+}
+
+/* 3. Scroll Reveal Initial State */
+/* We set opacity to 0 and a slight move down so GSAP can animate them 'up' */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    will-change: transform, opacity;
+}
+
+/* 4. Optimization: Hide cursor on mobile/tablets */
+@media (max-width: 850px) {
+
+    .cursor,
+    .ambient-glow {
+        display: none;
+    }
+
+    /* Disable reveal offset on mobile for better scrolling performance */
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (min-width: 851px) {
+    body {
+        cursor: none;
+        /* Hides the default arrow */
+    }
+
+    /* Ensure links and buttons also hide the default cursor */
+    a,
+    button,
+    .btn,
+    .nav-toggle {
+        cursor: none;
+    }
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.loader-wrapper {
+    position: fixed;
+    inset: 0;
+    background: #0a0a0a;
+    background-image: linear-gradient(rgba(255, 140, 0, 0.05) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(255, 140, 0, 0.05) 1px, transparent 1px);
+    background-size: 50px 50px; /* Grid effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 30000;
+}
+
+.loader-main {
+    position: relative;
+    width: 300px;
+    text-align: left;
+}
+
+/* Scanning Laser Line */
+.scan-line {
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: var(--primary-color);
+    box-shadow: 0 0 15px var(--primary-color);
+    top: 0;
+    z-index: 2;
+}
+
+.glitch-text {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+}
+
+.progress-bar-container {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px 0;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    width: 0%;
+    height: 100%;
+    background: var(--primary-color);
+}
+
+.status-log {
+    font-family: monospace;
+    font-size: 0.7rem;
+    color: var(--primary-color);
+    text-transform: uppercase;
 }
