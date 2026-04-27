@@ -12,10 +12,10 @@ document.addEventListener('DOMContentLoaded', () => {
         "Establishing Secure Handshake...",
         "Initialization Complete."
     ];
-    
+
     const logElement = document.getElementById('log-text');
     const fill = document.querySelector('.progress-bar-fill');
-    
+
     // 2. Preloader Timeline
     const masterTL = gsap.timeline({
         onComplete: () => {
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         width: "100%",
         duration: 3,
         ease: "power2.inOut",
-        onUpdate: function() {
+        onUpdate: function () {
             const prog = Math.floor(this.progress() * 4);
             logElement.innerText = logs[prog];
         }
@@ -150,13 +150,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('mousemove', (e) => {
             const x = (e.clientX / window.innerWidth) - 0.5;
             const y = (e.clientY / window.innerHeight) - 0.5;
-
-            gsap.to(".ambient-glow", {
-                x: x * 100,
-                y: y * 100,
-                duration: 2,
-                ease: "power2.out"
-            });
         });
         // Add this inside the (window.innerWidth > 850) block in script.js
         const links = document.querySelectorAll('a, button, .btn');
