@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- 2. Typing Effect Logic ---
-    const textToType = "I am a AI & ML Specialist and AI & ML Lead at GDG on Campus AEC";
+    const textToType = "I am a AI & ML Specialist";
     const typingSpeed = 75;
     let charIndex = 0;
 
